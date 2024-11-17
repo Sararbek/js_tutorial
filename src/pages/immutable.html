@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JavaScript tutorial</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="bg-[#212424] p-[10px] fixed left-0 top-0 z-10 w-full font-Inter"
+    >
+      <div class="container max-w-screen-xl">
+        <div class="flex items-center justify-between max-sm:flex-col gap-y-1">
+          <div class="flex items-center justify-center py-[10px] gap-3">
+            <div
+              class="w-8 h-8 flex justify-center items-center rounded-full bg-[#fbbb19]"
+            >
+              <span class="text-lg font-bold text-shadow-lg shadow-black"
+                >JS</span
+              >
+            </div>
+            <div>
+              <span class="text-white font-bold text-base"
+                >Learn JavaScript</span
+              >
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <a href="../../index.html" class="font-normal underline text-[#eee] tracking-wider text-sm">Mutable</a>
+            <a href="./immutable.html" class="font-normal underline text-slate-500 tracking-wider text-sm">Immutable</a>
+            <a href="./other.html" class="font-normal underline text-[#eee] tracking-wider text-sm">Others</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main -->
+    <div class="bg-[#303030] pt-28 pb-10 font-Inter text-white max-sm:pt-36">
+      <div class="container max-w-screen-md">
+        <div>
+          <div class="flex gap-4 items-center">
+            <p class="text-base font-medium tracking-wider max-sm:text-sm">
+              Ko'proq o'rganishni xohlaysizmi?
+            </p>
+            <button
+              class="text-base py-3 px-4 bg-[#555] font-medium rounded-lg max-sm:text-sm flex-shrink-0"
+            ><a href="https://www.w3schools.com/js/js_objects.asp">Qani ketdik</a>
+            </button>
+          </div>
+          <div class="my-6 max-sm:mt-12">
+            <h3 class="font-semibold text-2xl mb-3">Immutable Methods</h3>
+            <span class="text-[12px] font-bold tracking-wider"
+              >Immutable (o'zgartirilmaydigan) metodlar esa array yoki obyektni o'zgartirmaydi, faqat yangi qiymat qaytaradi</span
+            >
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">Concat () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar1</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 2, 3];</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar2</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[4, 5, 6];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let
+                <span class="text-[#f8f8f2]">combined</span
+                ><span class="text-yellow-200">=</span>
+                <span class="text-[#f8f8f2]">raqamlar1</span>
+                <span class="text-red-500">.concat( <span class="text-[#f8f8f2]">raqamlar2</span> )</span>
+                <span class="text-slate-600"> // raqamlar1 va raqamlar2 ni birlashtiradi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">combined</span> ) </span
+                ><span class="text-slate-600"> /// [1, 2, 3, 4, 5, 6]</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">raqamlar1</span> )</span
+                ><span class="text-slate-600"> // [1, 2, 3] (o'zgarmaydi)</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">raqamlar2</span> )</span
+                ><span class="text-slate-600"> // [4, 5, 6] (o'zgarmaydi)</span>
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">concat()</span>
+                metodi JavaScriptda ikki yoki undan ko‘p arraylarni birlashtirib, yangi array yaratadi va asl arraylarni o‘zgartirmaydi.
+              </p>
+              
+            </div>
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">Slice () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 2, 3, 4, 5];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">sliced</span
+                ><span class="text-yellow-200"> = </span>
+                <span class="text-[#f8f8f2]">raqamlar.</span
+                    >
+                <span class="text-red-500">slice( <span class="text-[#f8f8f8]">1, 4</span> )</span>
+                <span class="text-slate-600"> // 1-indexdan boshlab 4-indexgacha (4 o'zi kirmaydi) kesadi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">sliced</span> )</span
+                ><span class="text-slate-600"> // [2, 3, 4]</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">raqamlar</span> )</span
+                ><span class="text-slate-600"> // [1, 2, 3, 4, 5] (asl array o'zgarmaydi)</span>
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">slice()</span>
+                metodi JavaScriptda arrayning belgilangan qismidan yangi array yaratadi, lekin asl arrayni o'zgartirmaydi.
+              </p>
+            </div>
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">Map () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 2, 3, 4, 5];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">squared</span
+                ><span class="text-yellow-200"> = </span>
+                <span class="text-[#f8f8f2]">raqamlar.</span
+                    >
+                <span class="text-red-500">map( <span class="text-[#f8f8f8]">num => num * num</span> )</span>
+                <span class="text-slate-600"> // har bir elementni kvadratga ko'paytiradi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">squared</span> )</span
+                ><span class="text-slate-600"> // [1, 4, 9, 16, 25]</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">raqamlar</span> )</span
+                ><span class="text-slate-600"> // [1, 2, 3, 4, 5] (asl array o'zgarmaydi)</span>
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">map()</span>
+                metodi JavaScriptda arraydagi har bir elementga berilgan funksiya qo‘llanib, yangi array yaratadi. Asl array o'zgarmaydi.
+              </p>
+            </div>
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">Filter () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 2, 3, 4, 5];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">evenNumbers </span
+                ><span class="text-yellow-200"> = </span>
+                <span class="text-[#f8f8f2]">raqamlar.</span
+                    >
+                <span class="text-red-500">filter( <span class="text-[#f8f8f8]">num => num % 2 === 0</span> )</span>
+                <span class="text-slate-600"> // faqat juft sonlarni tanlaydi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">evenNumbers</span> )</span
+                ><span class="text-slate-600"> // [2, 4]</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">raqamlar</span> )</span
+                ><span class="text-slate-600"> // [1, 2, 3, 4, 5] (asl array o'zgarmaydi)</span>
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">filter()</span>
+                metodi JavaScriptda arraydagi elementlarni berilgan shartga mos kelishiga qarab saralab, yangi array yaratadi. Asl array o'zgarmaydi.
+              </p>
+            </div>
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">Reduce () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 2, 3, 4, 5];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">sum</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-red-500">.reduce( <span class="text-[#f8f8f8]">(accumulator, current) => accumulator + current, 0</span> );</span>
+                <br>
+                <span class="text-slate-600"><span class="py-1 px-3 rounded-md bg-[#555] text-white">accumulator</span> -  yig‘ib boruvchi (boshlang‘ich qiymat bilan boshlaydi, keyin yig‘imni saqlaydi).</span>
+                <br>
+                <span class="text-slate-600"><span class="py-1 px-3 rounded-md bg-[#555] text-white">current</span> -  hozirgi element.</span>
+                <br>
+                <span class="text-slate-600"><span class="py-1 px-3 rounded-md bg-[#555] text-white">0</span> -   boshlang‘ich qiymat (ixtiyoriy, kerak bo‘lsa ko‘rsatiladi).</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">sum</span> )</span
+                ><span class="text-slate-600"> / // 15</span>
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">reduce()</span>
+                metodi JavaScriptda arraydagi elementlarni birlashtirish yoki yig‘ish uchun ishlatiladi. U berilgan funksiyani ketma-ket har bir elementga qo‘llab, bitta yakuniy qiymat hosil qiladi.
+              </p>
+            </div>
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">Some () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 2, 3, 4, 5];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">hasEven </span>
+                <span class="text-yellow-200"> = </span>
+                <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-red-500">.some( <span class="text-[#f8f8f8]">num => num % 2 === 0</span> );</span>
+                <span class="text-slate-600"> // juft son bormi, tekshiradi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">hasEven</span> )</span
+            ><span class="text-slate-600">// true (2 va 4 juft sonlar)</span>
+              </p>
+              <p class="text-slate-600">
+                Agar arraydagi kamida bitta element shartni qanoatlantirsa, <span class="py-1 px-3 rounded-md bg-[#555] text-white">some()</span> <span class="py-1 px-3 rounded-md bg-[#555] text-white">true</span> qaytaradi. Aks holda, <span class="py-1 px-3 rounded-md bg-[#555] text-white">false</span>  qaytaradi.
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">some()</span>
+                metodi JavaScriptda arraydagi elementlarning kamida bittasi berilgan shartga mos keladimi, shuni tekshiradi va <span class="py-1 px-3 rounded-md bg-[#555]">true</span> yoki <span class="py-1 px-3 rounded-md bg-[#555]">false</span> qaytaradi
+              </p>
+            </div>
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">Every () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[2, 4, 6, 8];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">allEven  </span>
+                <span class="text-yellow-200"> = </span>
+                <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-red-500">.every( <span class="text-[#f8f8f8]">num => num % 2 === 0</span> );</span>
+                <span class="text-slate-600">  barcha elementlar juftmi, tekshiradi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">allEven</span> )</span
+            ><span class="text-slate-600">// true (hamma elementlar juft)</span>
+              </p>
+              <p class="text-slate-600">
+                Agar arraydagi barcha elementlar shartni qanoatlantirsa, <span class="py-1 px-3 rounded-md bg-[#555] text-white">every()</span> <span class="py-1 px-3 rounded-md bg-[#555] text-white">true</span> qaytaradi. Agar birgina element shartga mos kelmasa, <span class="py-1 px-3 rounded-md bg-[#555] text-white">false</span>  qaytaradi.
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">every()</span>
+                metodi JavaScriptda arraydagi har bir element berilgan shartga mos keladimi, shuni tekshiradi va  <span class="py-1 px-3 rounded-md bg-[#555]">true</span> yoki <span class="py-1 px-3 rounded-md bg-[#555]">false</span> qaytaradi
+              </p>
+            </div>
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">Find () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 3, 5, 6, 7];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">firstEven </span>
+                <span class="text-yellow-200"> = </span>
+                <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-red-500">.find( <span class="text-[#f8f8f8]">num => num % 2 === 0</span> );</span>
+                <span class="text-slate-600"> // birinchi juft sonni topadi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">firstEven</span> )</span
+            ><span class="text-slate-600">// 6</span>
+              </p>
+              <p class="text-slate-600">
+                 <span class="py-1 px-3 rounded-md bg-[#555] text-white">find()</span> arrayni boshidan boshlab birma-bir tekshiradi. <br> 
+                 Shartni qanoatlantirgan birinchi element topilgach, qidirishni to'xtatadi. <br>
+                 Agar shartga mos element bo'lmasa,
+                 <span class="py-1 px-3 rounded-md bg-[#555] text-white">undefined</span> qaytaradi. 
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">find()</span>
+                metodi JavaScriptda arraydagi birinchi elementni berilgan shartga mos kelishiga qarab topadi va o'sha elementni qaytaradi. Agar hech qaysi element mos kelmasa, undefined qaytaradi.
+              </p>
+            </div>
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">FindIndex () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 3, 5, 6, 7];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">firstEvenIndex  </span>
+                <span class="text-yellow-200"> = </span>
+                <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-red-500">.findIndex( <span class="text-[#f8f8f8]">num => num % 2 === 0</span> );</span>
+                <span class="text-slate-600"> // birinchi juft sonning indeksini topadi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">firstEvenIndex</span> )</span
+            ><span class="text-slate-600">// 3</span>
+              </p>
+              <p class="text-slate-600">
+                 <span class="py-1 px-3 rounded-md bg-[#555] text-white">findIndex()</span> arrayni boshidan boshlab birma-bir tekshiradi. <br> 
+                 Shartga mos kelgan birinchi elementning indeksi topilgach, qidirishni to'xtatadi. <br>
+                 Agar shartga mos element topilmasa,
+                 <span class="py-1 px-3 rounded-md bg-[#555] text-white">-1</span> qaytaradi. 
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">findIndex()</span>
+                metodi JavaScriptda arraydagi birinchi elementning indeksini berilgan shartga mos kelishiga qarab qaytaradi. Agar hech qaysi element shartga mos kelmasa, <span class="py-1 px-3 rounded-md bg-[#555] text-white">-1</span> qaytaradi
+              </p>
+            </div>
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">includes () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 2, 3, 4, 5];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">hasThree </span>
+                <span class="text-yellow-200"> = </span>
+                <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-red-500">.includes( <span class="text-[#f8f8f8]">3</span> );</span>
+                <span class="text-slate-600"> // 3 qiymati mavjudligini tekshiradi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">hasThree</span> )</span
+            ><span class="text-slate-600">// true</span>
+              </p>
+              <p class="text-slate-600">
+                 <span class="py-1 px-3 rounded-md bg-[#555] text-white">includes(value)</span> metodi berilgan  <span class="py-1 px-3 rounded-md bg-[#555] text-white">value</span> qiymati arrayda mavjud bo‘lsa, <span class="py-1 px-3 rounded-md bg-[#555] text-white">true</span> qaytaradi. <br> 
+                 Agar qiymat mavjud bo'lmasa,
+                 <span class="py-1 px-3 rounded-md bg-[#555] text-white">false</span> qaytaradi <br>
+                 <span class="py-1 px-3 rounded-md bg-[#555] text-white">includes()</span> faqat qiymatni tekshiradi indeksni emas. 
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">includes()</span>
+                metodi JavaScriptda arrayda ma'lum bir qiymat mavjudligini tekshiradi va natijaga qarab, <span class="py-1 px-3 rounded-md bg-[#555] text-white">true</span> yoki <span class="py-1 px-3 rounded-md bg-[#555] text-white">false</span>  qaytaradi
+              </p>
+            </div>
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">indexOf () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[10, 20, 30, 40, 50];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">index </span>
+                <span class="text-yellow-200"> = </span>
+                <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-red-500">.indexOf( <span class="text-[#f8f8f8]">30</span> );</span>
+                <span class="text-slate-600"> // 30 qiymatining indeksini topadi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">index</span> )</span
+            ><span class="text-slate-600">// 2</span>
+              </p>
+              <p class="text-slate-600">
+                 <span class="py-1 px-3 rounded-md bg-[#555] text-white">indexOf(value)</span> metodi arrayda berilgan <span class="py-1 px-3 rounded-md bg-[#555] text-white">value</span>  qiymatini qidiradi. <br>
+                 Agar qiymat arrayda mavjud bo‘lsa, uning birinchi uchrashgan indeksini qaytaradi. <br> 
+                 Agar qiymat mavjud bo‘lmasa,
+                 <span class="py-1 px-3 rounded-md bg-[#555] text-white">-1</span> qaytaradi 
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">indexOf()</span>
+                metodi JavaScriptda arrayda berilgan qiymatning birinchi uchrashgan indeksini qaytaradi. Agar qiymat mavjud bo'lmasa,  <span class="py-1 px-3 rounded-md bg-[#555] text-white">-1</span>  qaytaradi
+              </p>
+            </div>
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">toString () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 2, 3, 4, 5];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">str </span>
+                <span class="text-yellow-200"> = </span>
+                <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-red-500">.toString();</span>
+                <span class="text-slate-600"> // arrayni stringga aylantiradi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">str</span> )</span
+            ><span class="text-slate-600">// "1,2,3,4,5"</span>
+              </p>
+              <p class="text-slate-600">
+                 <span class="py-1 px-3 rounded-md bg-[#555] text-white">toString()</span> array yoki boshqa obyektlarni string ko‘rinishida ko‘rsatish uchun ishlatiladi. <br>
+                 Array uchun, har bir element vergul bilan ajratilgan ro‘yxat sifatida qaytariladi. <br> 
+                 Asl array o‘zgarmaydi, faqat yangi string qiymati olinadi.
+              </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">toString()</span>
+                metodi JavaScriptda arrayni yoki obyektni string (matn) ko‘rinishida qaytaradi. Array bo‘lsa, elementlarni vergul bilan ajratib ko‘rsatadi.
+              </p>
+            </div>
+          </div>       
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">Join () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 2, 3, 4, 5];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                <span class="text-[#f8f8f2]">str </span>
+                <span class="text-yellow-200"> = </span>
+                <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-red-500">.join( <span class="text-[#f8f8f8]">'-'</span> );</span>
+                <span class="text-slate-600"> // array elementlarini "-" bilan ajratib birlashtiradi</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">str</span> )</span
+            ><span class="text-slate-600">// "1-2-3-4-5"</span>
+              </p>
+              <p class="text-slate-600">
+                 <span class="py-1 px-3 rounded-md bg-[#555] text-white">join()</span> arraydagi elementlarni birlashtirib, belgilangan separator yordamida string hosil qiladi.<br>
+                 Agar separatorni ko‘rsatmasangiz, default qiymat sifatida vergul <span class="py-1 px-3 rounded-md bg-[#555] text-white">(,)</span>ishlatiladi 
+              </p>
+            </div>
+            <div>
+                <p class="text-base font-semibold">Misol: Separator ko‘rsatilmasdan:</p>
+              </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+                <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                  let <span class="text-[#f8f8f2]">raqamlar</span>
+                  <span class="text-yellow-200">=</span>
+                  <span class="text-red-500">[1, 2, 3, 4, 5];</span>
+                  <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+                </p>
+                <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">let 
+                  <span class="text-[#f8f8f2]">str </span>
+                  <span class="text-yellow-200"> = </span>
+                  <span class="text-[#f8f8f2]">raqamlar</span>
+                  <span class="text-red-500">.join();</span>
+                  <span class="text-slate-600"> // vergul bilan ajratilgan string</span>
+                </p>
+                <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                  console<span class="text-yellow-200">.log( <span class="text-[#f8f8f2]">str</span> )</span
+              ><span class="text-slate-600">// "1,2,3,4,5"</span>
+                </p>
+                <p class="text-slate-600">
+                   <span class="py-1 px-3 rounded-md bg-[#555] text-white">join()</span> arraydagi elementlarni birlashtirib, belgilangan separator yordamida string hosil qiladi.<br>
+                   Agar separatorni ko‘rsatmasangiz, default qiymat sifatida vergul <span class="py-1 px-3 rounded-md bg-[#555] text-white">(,)</span>ishlatiladi 
+                </p>
+              </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">join()</span>
+                metodi JavaScriptda arraydagi elementlarni birlashtirib, ularni biror ajratuvchi (separator) bilan ulaydi va yangi string qaytaradi. Agar ajratuvchi ko‘rsatilmasa, elementlar vergul bilan ajratiladi.
+              </p>
+            </div>
+          </div>       
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+     <footer class="bg-[#212424] py-4 text-white">
+        <div class="container max-w-screen-lg">
+            <div class="flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copyright"></i> made by Sarvarbek
+            </div>
+        </div>
+     </footer>
+  </body>
+</html>

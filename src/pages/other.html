@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>JavaScript tutorial</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="bg-[#212424] p-[10px] fixed left-0 top-0 z-10 w-full font-Inter"
+    >
+      <div class="container max-w-screen-xl">
+        <div class="flex items-center justify-between max-sm:flex-col gap-y-1">
+          <div class="flex items-center justify-center py-[10px] gap-3">
+            <div
+              class="w-8 h-8 flex justify-center items-center rounded-full bg-[#fbbb19]"
+            >
+              <span class="text-lg font-bold text-shadow-lg shadow-black"
+                >JS</span
+              >
+            </div>
+            <div>
+              <span class="text-white font-bold text-base"
+                >Learn JavaScript</span
+              >
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <a
+              href="../../index.html"
+              class="font-normal underline text-[#eee] tracking-wider text-sm"
+              >Mutable</a
+            >
+            <a
+              href="./immutable.html"
+              class="font-normal underline text-[#eee] tracking-wider text-sm"
+              >Immutable</a
+            >
+            <a
+              href="./other.html"
+              class="font-normal underline text-slate-500 tracking-wider text-sm"
+              >Others</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main -->
+    <div class="bg-[#303030] pt-28 pb-10 font-Inter text-white max-sm:pt-36">
+      <div class="container max-w-screen-md">
+        <div>
+          <div class="flex gap-4 items-center">
+            <p class="text-base font-medium tracking-wider max-sm:text-sm">
+              Ko'proq o'rganishni xohlaysizmi?
+            </p>
+            <button
+              class="text-base py-3 px-4 bg-[#555] font-medium rounded-lg max-sm:text-sm flex-shrink-0"
+            ><a href="https://www.w3schools.com/js/js_objects.asp">Qani ketdik</a>
+            </button>
+          </div>
+          <div class="my-6 max-sm:mt-12">
+            <h3 class="font-semibold text-2xl mb-3">Others</h3>
+            <span class="text-[12px] font-bold tracking-wider"
+              >Bunday turdagi methodlar faqat iteratsiya qiladi, lekin arrayni o'zgartirmaydi</span
+            >
+          </div>
+          <div class="my-10">
+            <div>
+              <p class="text-base font-semibold">forEach () methodi</p>
+            </div>
+            <div class="my-6 p-4 rounded-md bg-[#272822]">
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                let <span class="text-[#f8f8f2]">raqamlar</span>
+                <span class="text-yellow-200">=</span>
+                <span class="text-red-500">[1, 2, 3, 4, 5];</span>
+                <span class="text-slate-600"> // Raqamlar ro'yxati</span>
+              </p>
+              <p class="text-[#66d9ef] tracking-wider text-base leading-[36px]">
+                <span class="text-[#f8f8f2]">raqamlar</span
+                ><span class="text-yellow-200">.</span>
+                <span class="text-red-500">forEach(
+                    <span class="text-[#f8f8f8]">num => {</span> <span class="text-[#66d9ef]">console</span> <span class="text-yellow-200">.log( <span class="text-[#f8f8f8]">num * 2</span> });</span>
+                    )</span>
+                <span class="text-slate-600"> / har bir elementni 2 ga ko‘paytirib chiqaradi</span>
+              </p>
+              <p class="text-slate-600">
+                <span class="py-1 px-3 rounded-md bg-[#555] text-white">forEach()</span> ametodiga berilgan funksiyani arrayning har bir elementiga qo‘llaydi.<br>
+                <span class="py-1 px-3 rounded-md bg-[#555] text-white">forEach()</span>  metodidan qaytadigan qiymat yo‘q. Bu faqat side effect (masalan, konsolga chiqarish) uchun ishlatiladi. <br>
+                <span class="py-1 px-3 rounded-md bg-[#555] text-white">forEach()</span> arraydagi elementlarni o‘zgartirmaydi.
+             </p>
+            </div>
+            <div>
+              <p class="text-base font-medium leading-8">
+                <span class="py-1 px-3 rounded-md bg-[#555]">forEach()</span>
+                metodi JavaScriptda arraydagi har bir elementga berilgan funksiya qo‘llanadi. Bu metod arrayni o‘zgartirmaydi va har bir element uchun bir marta ishlaydi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-[#212424] py-4 text-white">
+      <div class="container max-w-screen-lg">
+        <div class="flex items-center justify-center gap-1">
+          <i class="fa-regular fa-copyright"></i> made by Sarvarbek
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

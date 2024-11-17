@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.15"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/main.css -o ./src/output.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss-textshadow": "^2.1.3"
+  }
+}
